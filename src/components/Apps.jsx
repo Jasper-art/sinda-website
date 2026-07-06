@@ -4,18 +4,24 @@ const apps = [
     desc: 'All-in-one business bookkeeping for Zambian SMEs. Track sales, expenses, income and profits — works offline.',
     badge: 'Live Now',
     icon: '📊',
-    color: 'border-indigo-300 bg-indigo-50',
-    badgeColor: 'bg-indigo-600 text-white',
+    color: 'border-slate-400 bg-gradient-to-br from-slate-800 to-slate-900',
+    badgeColor: 'bg-emerald-500 text-white font-bold',
     link: 'https://biztracker-1ac9d.web.app',
+    isExternal: true,
+    textClass: 'text-white',
+    btnColor: 'bg-slate-700 hover:bg-slate-600',
   },
   {
     name: 'RankIt ZM',
     desc: 'School management & student ranking system for Zambian schools. Offline-first design for rural use.',
-    badge: 'Coming Soon',
+    badge: 'Download APK',
     icon: '🎓',
-    color: 'border-blue-200 bg-blue-50',
-    badgeColor: 'bg-blue-100 text-blue-700',
-    link: null,
+    color: 'border-emerald-400 bg-gradient-to-br from-emerald-900 to-emerald-950',
+    badgeColor: 'bg-amber-400 text-emerald-900 font-bold',
+    link: '/downloads/rankitzm.apk',
+    isDownload: true,
+    textClass: 'text-white',
+    btnColor: 'bg-emerald-600 hover:bg-emerald-700',
   },
   {
     name: 'QuickTap Pro',
@@ -63,17 +69,18 @@ export default function Apps() {
                 </span>
               </div>
 
-              <h3 className="font-bold text-[#0A2A66] text-lg mb-2">{app.name}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed flex-1">{app.desc}</p>
+              <h3 className={`font-bold text-lg mb-2 ${app.textClass ? 'text-white' : 'text-[#0A2A66]'}`}>{app.name}</h3>
+              <p className={`text-sm leading-relaxed flex-1 ${app.textClass ? 'text-gray-300' : 'text-gray-600'}`}>{app.desc}</p>
 
               {app.link ? (
                 <a
                   href={app.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 block text-center bg-indigo-600 text-white text-sm font-semibold py-2.5 rounded-xl hover:bg-indigo-700 active:scale-95 transition-all duration-150"
+                  target={app.isExternal ? "_blank" : undefined}
+                  rel={app.isExternal ? "noopener noreferrer" : undefined}
+                  download={app.isDownload ? "rankitzm.apk" : undefined}
+                  className={`mt-5 block text-center text-white text-sm font-semibold py-2.5 rounded-xl active:scale-95 transition-all duration-150 ${app.btnColor || 'bg-indigo-600 hover:bg-indigo-700'}`}
                 >
-                  Open App →
+                  {app.isExternal ? 'Open App →' : app.isDownload ? 'Download APK ↓' : 'View'}
                 </a>
               ) : (
                 <div className="mt-5 text-center text-xs text-gray-400 italic py-2">
