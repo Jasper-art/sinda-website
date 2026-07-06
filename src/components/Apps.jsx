@@ -18,7 +18,7 @@ const apps = [
     icon: '🎓',
     color: 'border-emerald-400 bg-gradient-to-br from-emerald-900 to-emerald-950',
     badgeColor: 'bg-amber-400 text-emerald-900 font-bold',
-    link: '/downloads/rankitzm.apk',
+    link: '/sinda-website/downloads/rankitzm.apk',
     isDownload: true,
     textClass: 'text-white',
     btnColor: 'bg-emerald-600 hover:bg-emerald-700',
