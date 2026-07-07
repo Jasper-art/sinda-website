@@ -32,14 +32,17 @@ const apps = [
     badgeColor: 'bg-green-100 text-green-700',
     link: null,
   },
-  {
+ {
     name: 'ZedCourier',
     desc: 'Courier & logistics management for Eastern Province. Track parcels and manage deliveries.',
-    badge: 'Coming Soon',
+    badge: 'Live Now',
     icon: '📦',
-    color: 'border-orange-200 bg-orange-50',
-    badgeColor: 'bg-orange-100 text-orange-700',
-    link: null,
+    color: 'border-orange-400 bg-gradient-to-br from-orange-900 to-orange-950',
+    badgeColor: 'bg-amber-400 text-orange-900 font-bold',
+    link: 'https://zedcourier.vercel.app',
+    isExternal: true,
+    textClass: 'text-white',
+    btnColor: 'bg-orange-600 hover:bg-orange-700',
   },
 ]
 
