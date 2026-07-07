@@ -26,11 +26,14 @@ const apps = [
   {
     name: 'QuickTap Pro',
     desc: 'Point-of-sale system for Zambian tuckshops & small businesses. Fast, simple, works offline.',
-    badge: 'Coming Soon',
+    badge: 'Live Now',
     icon: '🛒',
-    color: 'border-green-200 bg-green-50',
-    badgeColor: 'bg-green-100 text-green-700',
-    link: null,
+    color: 'border-green-400 bg-gradient-to-br from-green-900 to-green-950',
+    badgeColor: 'bg-amber-400 text-green-900 font-bold',
+    link: 'https://jasper-art.github.io/quick-tap/',
+    isExternal: true,
+    textClass: 'text-white',
+    btnColor: 'bg-green-600 hover:bg-green-700',
   },
  {
     name: 'ZedCourier',
